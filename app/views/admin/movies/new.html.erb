@@ -1,0 +1,27 @@
+<h1>New Movie</h1>
+
+<%= form_with(model: [:admin, @movie], local: true, multipart: true) do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :thumbnail %><br>
+    <%= form.file_field :thumbnail %>
+  </div>
+
+  <div>
+    <%= form.label :video %><br>
+    <%= form.file_field :video %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

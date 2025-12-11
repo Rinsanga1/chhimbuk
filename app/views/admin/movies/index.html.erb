@@ -1,0 +1,12 @@
+<h1>Admin Movies</h1>
+
+<%= link_to "New Movie", new_admin_movie_path %>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li>
+      <%= movie.title %>
+      <%= button_to "Delete", admin_movie_path(movie), method: :delete, data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
