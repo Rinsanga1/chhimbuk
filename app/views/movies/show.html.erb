@@ -1,0 +1,23 @@
+<div class="bg-background-dark text-accent-pastel p-4">
+  <div class="mb-4">
+    <%= link_to "← Back to Home", root_path, class: "text-accent-pastel hover:opacity-75" %>
+  </div>
+
+  <div class="max-w-4xl mx-auto">
+    <% if @movie.video.attached? %>
+      <video class="w-full" controls>
+        <source src="<%= url_for(@movie.video) %>">
+        Your browser does not support the video tag.
+      </video>
+    <% else %>
+      <div class="w-full bg-background-medium flex items-center justify-center" style="height: 50vh;">
+        <span class="text-accent-pastel opacity-50">No video available</span>
+      </div>
+    <% end %>
+
+    <div class="mt-4">
+      <h1 class="text-3xl font-bold"><%= @movie.title %></h1>
+      <p class="mt-2 text-accent-pastel opacity-75"><%= @movie.description %></p>
+    </div>
+  </div>
+</div>
