@@ -58,17 +58,10 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # Set host to be used by links generated in mailer templates.
-  config.action_mailer.default_url_options = { host: "72.61.238.223" }
+  config.action_mailer.default_url_options = { host: "rina-ralte.com" }
 
   # Set host to be used by links generated in controllers and routes.
-  config.action_controller.default_url_options = { host: "72.61.238.223" }
-
-  # Ignore bad email addresses and do not raise email delivery errors.
-  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
-
-  # Set host to be used by links generated in mailer templates.
-  config.action_mailer.default_url_options = { host: "example.com" }
+  config.action_controller.default_url_options = { host: "rina-ralte.com" }
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via rails credentials:edit.
   # config.action_mailer.smtp_settings = {
@@ -91,6 +84,7 @@ Rails.application.configure do
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   config.hosts = [
+    "rina-ralte.com",
     "72.61.238.223",
     "localhost"
   ]
