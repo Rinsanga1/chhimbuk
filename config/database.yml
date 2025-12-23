@@ -27,3 +27,9 @@ production:
   cable:
     <<: *default
     database: storage/production.sqlite3
+  queue:
+    <<: *default
+    database: storage/production.sqlite3
+  cache:
+    <<: *default
+    database: storage/production.sqlite3
