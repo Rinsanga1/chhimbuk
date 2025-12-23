@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   resources :movies, only: [:show]
   root "pages#home"
   namespace :admin do
+    root "movies#index"
     resources :movies, only: [:index, :new, :create, :destroy]
   end
-  get "/admin", to: redirect("/admin/movies")
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
